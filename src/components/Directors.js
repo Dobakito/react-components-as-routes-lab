@@ -4,7 +4,13 @@ import { directors } from '../data';
 const Directors = () => {
   return (
     <div>
-      {/*{code here}*/}
+      <h1>Directors Page</h1>
+      {directors.map((director, id) => (
+        <div key={id}>
+          <h2>{director.name}</h2>
+          <h3>{director.movies}</h3>
+        </div>
+      ))}
     </div>
   );
 }
